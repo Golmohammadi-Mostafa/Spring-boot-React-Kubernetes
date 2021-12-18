@@ -1,0 +1,9 @@
+server:
+  port: 8080 # This is the default port anyway, but you can change it here
+spring:
+  application:
+    name: stakater-backend
+  profiles:
+    active: dev
+stakater:
+  contact-name: ${CONTACT_NAME:MY_FRIIEND}

@@ -1,0 +1,8 @@
+FROM adoptopenjdk/openjdk11:x86_64-alpine-jdk-11.0.13_8
+VOLUME /tmp
+ARG JAR_FILE=target/*.jar
+COPY --chmod=755 ${JAR_FILE} app.jar
+WORKDIR /opt/app
+ENV PORT 8080
+EXPOSE 8080
+ENTRYPOINT ["java","-jar","/app.jar"]
